@@ -10,11 +10,12 @@ import java.util.Map;
 @Slf4j
 public class QualityContext {
 
+    private static QualityContext instance;
 
     private final Map<QualityName, QualityStandart> qualityStandardMap = new HashMap<>();
 
 
-    public  QualityContext() {
+    private  QualityContext() {
         QualityStandart premiumQuality = new PremiumQuality();
         qualityStandardMap.put(QualityName.premium, premiumQuality);
         QualityStandart standardQuality = new StandardQuality();
@@ -23,10 +24,15 @@ public class QualityContext {
         qualityStandardMap.put(QualityName.basic, basicQuality);
     }
 
+    public static synchronized QualityContext getInstance() {
+        if (instance == null) {
+            instance = new QualityContext();
+        }
+        return instance;
+    }
+
     public QualityData getQualityData(QualityName qualityName) {
         return qualityStandardMap.get(qualityName).getQuality();
-
-
     }
 
     public QualityData getQualityData(String qualityName) {

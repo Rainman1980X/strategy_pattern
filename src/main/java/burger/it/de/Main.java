@@ -5,11 +5,12 @@ import burger.it.de.strategy.QualityContext;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+
 @Slf4j
 @RequiredArgsConstructor
 public class Main {
 
-    private static final QualityContext qualityContext = new QualityContext();
+    private static final QualityContext qualityContext = QualityContext.getInstance();
     public static void main(String[] args) {
         log.info("\nStarting....\n");
         log.info("Permium...\n");
