@@ -16,8 +16,8 @@ public class StrategiePatternExample {
     public static void main(String[] args) {
         SpringApplication.run(StrategiePatternExample.class, args);
         log.info("\nStarting....\n");
-        log.info("Permium...\n");
-        log.info(qualityContext.getQualityData("Permium").toString());
+        log.info("Premium...\n");
+        log.info(qualityContext.getQualityData("Premium").toString());
         log.info("\nStandard...\n");
         log.info(qualityContext.getQualityData(QualityName.standard).toString());
         log.info("\nBasic...\n");

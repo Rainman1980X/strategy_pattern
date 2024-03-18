@@ -12,15 +12,15 @@ public class QualityContext {
 
     private static QualityContext instance;
 
-    private final Map<QualityName, QualityStandart> qualityStandardMap = new HashMap<>();
+    private final Map<QualityName, QualityStandard> qualityStandardMap = new HashMap<>();
 
 
     private  QualityContext() {
-        QualityStandart premiumQuality = new PremiumQuality();
+        QualityStandard premiumQuality = new PremiumQuality();
         qualityStandardMap.put(QualityName.premium, premiumQuality);
-        QualityStandart standardQuality = new StandardQuality();
+        QualityStandard standardQuality = new StandardQuality();
         qualityStandardMap.put(QualityName.standard, standardQuality);
-        QualityStandart basicQuality = new BasicQuality();
+        QualityStandard basicQuality = new BasicQuality();
         qualityStandardMap.put(QualityName.basic, basicQuality);
     }
 

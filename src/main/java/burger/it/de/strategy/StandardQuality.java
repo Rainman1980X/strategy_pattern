@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 
 @Component
-public class StandardQuality implements QualityStandart{
+public class StandardQuality implements QualityStandard {
     @Override
     public QualityData getQuality() {
         return QualityData.builder()

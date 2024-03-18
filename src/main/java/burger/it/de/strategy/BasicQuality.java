@@ -7,7 +7,7 @@ import burger.it.de.model.enums.QualityType;
 import org.springframework.stereotype.Component;
 
 @Component
-public class BasicQuality implements QualityStandart {
+public class BasicQuality implements QualityStandard {
     @Override
     public QualityData getQuality() {
         return QualityData.builder()
