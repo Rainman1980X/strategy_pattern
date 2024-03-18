@@ -9,7 +9,7 @@ import java.util.Arrays;
 @RequiredArgsConstructor
 public enum QualityName {
 
-    premium("Permium"),
+    premium("Premium"),
     standard("Standard"),
     basic("Basic");
 
@@ -19,6 +19,6 @@ public enum QualityName {
         return  Arrays.stream(QualityName.values())
                 .filter(qn -> qn.getName().equalsIgnoreCase(qualityName))
                 .findFirst()
-                .orElseThrow(() -> new IllegalArgumentException("There is no value with name " + qualityName + " in Enum QualityName"));
+                .orElseThrow(() -> new IllegalArgumentException(STR."There is no value with name \{qualityName} in Enum QualityName"));
     }
 }

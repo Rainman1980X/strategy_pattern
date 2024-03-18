@@ -5,24 +5,25 @@ import burger.it.de.strategy.QualityContext;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @Slf4j
 @RequiredArgsConstructor
-//@SpringBootApplication
+@SpringBootApplication
 public class StrategiePatternExample {
 
     private static final QualityContext qualityContext = QualityContext.getInstance();
     public static void main(String[] args) {
         SpringApplication.run(StrategiePatternExample.class, args);
-        log.info("\nStarting....\n");
+        log.info("Starting....\n");
         log.info("Premium...\n");
         log.info(qualityContext.getQualityData("Premium").toString());
-        log.info("\nStandard...\n");
+        log.info("Standard...\n");
         log.info(qualityContext.getQualityData(QualityName.standard).toString());
-        log.info("\nBasic...\n");
+        log.info("Basic...\n");
         log.info(qualityContext.getQualityData(QualityName.basic).toString());
-        log.info("\nException...\n");
+        log.info("Exception...\n");
         log.info(qualityContext.getQualityData("Exception").toString());
     }
 }
