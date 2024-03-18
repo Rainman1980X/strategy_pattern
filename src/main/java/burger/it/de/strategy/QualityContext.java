@@ -41,7 +41,7 @@ public class QualityContext {
             return qualityStandardMap.get(QualityName.fromString(qualityName)).getQuality();
         } catch (Exception e){
             log.error(e.getLocalizedMessage());
-            throw new IllegalArgumentException("No quality standard found for " + qualityName,e);
+            throw new IllegalArgumentException(STR."No quality standard found for \{qualityName}",e);
         }
 
     }
