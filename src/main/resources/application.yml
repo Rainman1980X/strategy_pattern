@@ -1,0 +1,17 @@
+Configuration:
+  name: Default
+  Appends:
+    Console:
+      name: STDOUT
+      PatternLayout:
+        Pattern: "%d{ISO8601} [%t] %-5p %c %x - %m%n"
+  Loggers:
+    Root:
+      level: error
+      AppenderRef:
+        ref: STDOUT
+    Logger:
+      name: com.example
+      level: debug
+      AppenderRef:
+        ref: STDOUT
